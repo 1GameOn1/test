@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Clicker</title>
+		<meta name="description" content="Clicker">
+		<meta name="keywords" content="Clicker">
+		<link href="style.css" rel="stylesheet" type="text/css"/>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	</head>
+
+	<body>
+
+		<div class="wrap">
+			<td>
+				<tr>
+					<div class="subtit">Press it!</div>
+				</tr>
+			</td>
+			<td>
+				<tr>
+					<button class="button">0</button>
+				</tr>
+			</td>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+			const btn = document.querySelector('.button')
+			function heldleBtnClick(event) {
+				event.preventDefault();
+				let counteClickBtn = btn.textContent;
+				btn.textContent = parseInt(counteClickBtn) + 1;
+			}
+
+			btn.addEventListener('click', heldleBtnClick);
+		</script>
+
+	</body>
+</html>
